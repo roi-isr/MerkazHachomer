@@ -19,7 +19,7 @@ function App() {
           Learn React{" "}
         </a>{" "}
       </header>{" "}
-      <div> hello </div> <div> Hi </div>
+      <div> hello </div> <div> Hi you </div>
     </div>
   );
 }
