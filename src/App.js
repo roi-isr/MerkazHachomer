@@ -19,8 +19,8 @@ function App() {
           Learn React{" "}
         </a>{" "}
       </header>{" "}
-      <div> hello </div> <div> Hi you  </div>
-      <h1>What's up ?</h1>
+      <div> hello </div> <div> Hi you </div>
+      <h1>What's</h1>
     </div>
   );
 }
