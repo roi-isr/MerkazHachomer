@@ -21,6 +21,7 @@ function App() {
       </header>{" "}
       <div> hello </div> <div> Hi you  </div>
       <h1>What's up ?</h1>
+      <h2>Yesss</h2>
     </div>
   );
 }
