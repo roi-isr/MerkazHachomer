@@ -1,37 +1,31 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+// install react-router-dom
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+// install bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+import HomePage from "./project-files/daniel-folder/HomePage";
+import ItemView from "./project-files/amit-folder/ItemView";
+import VirtualStore from "./project-files/roi-folder/VirtualStore";
+import ProcessPage from "./ProcessPage";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        <h1>daniel yedid</h1>
-        <h1>roi</h1>
-        <h1>מקרה בדיד</h1>
-        <h2>אחלה מודי</h2>
-        <h3>רק בשעה השלישיתת</h3>
-        <h4>שלום אלכrggסיייי</h4>
-        <h5>למרות הכל - הפרוטוקול</h5>
-        <h6>זו שאלה של צאוור בקבוק !</h6>
-        <p>
-          Edit <code> src / App.js </code> and save to reload.{" "}
-        </p>{" "}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React{" "}
-        </a>{" "}
-      </header>{" "}
-      <div> hello </div> <div> Hi you </div>
-      <h1>What's</h1>
-      <h2>Yesss</h2>
-    </div>
+       <Router>
+        <Switch>
+          <Route path="/home"><HomePage/></Route>
+          <Route path="/virtual-store"><VirtualStore/></Route>{" "}
+          <Route path="/item-view"><ItemView/></Route>{" "}
+          <Route path="/process-page"><ProcessPage/></Route>{" "}
+          <Route exact path="/">
+            <Redirect to="/process-page"/>
+          </Route>
+
+
+        </Switch>
+      </Router>
+
   );
 }
 
