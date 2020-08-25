@@ -1,0 +1,46 @@
+.store-item{
+    background-color: black;
+    width: 350px;
+    height: 265px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.item-details{
+    width: 45%;
+}
+
+.topic-txt{
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Guttman-Aram';
+    line-height: 0;
+    margin-top: 20px;
+}
+
+.price-and-button{
+margin:10px;
+}
+
+.item-url-photo{
+    width: 100%;
+    height: 60%;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 20px;
+}
+
+.vs-main{
+    background-color:#a0a5a5;
+    width: 1200px;
+    height: 464px;
+    margin: auto;
+    margin-top: 3px;
+    border-radius: 2px;
+    padding:20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

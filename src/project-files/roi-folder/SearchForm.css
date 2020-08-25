@@ -7,6 +7,15 @@
     border-radius: 10px;
 }
 
+.vs-nav{
+    background-color:#3434ff;
+    width: 1200px;
+    height: 50px;
+    margin: auto;
+    margin-top: 1px;
+    border-radius: 3px;
+}
+
 .vs-welcome-title{
     font-family: Guttman Mantova-Decor;
     font-size: 50px;
