@@ -1,0 +1,51 @@
+.vs-header{
+    background-color:#3434ff;
+    width: 1200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 2px;
+    border-radius: 10px;
+}
+
+.vs-welcome-title{
+    font-family: Guttman Mantova-Decor;
+    font-size: 50px;
+    margin: 5px 80px;
+}
+
+.vs-header-div{
+    width:100%;
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-end;
+
+}
+
+.vs-right-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.vs-search{
+    margin: 20px 80px 0 auto;
+    width: 90%;
+}
+
+.search-input{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 5px;
+}
+
+.vs-search{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.vs-logo{
+    display: flex;
+    border: 5px black solid;
+    border-radius: 50px;
+    margin: 9px;
+    justify-content: right;
+
+}

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-
+import SearchForm from "./SearchForm"
 class VirtualStore extends Component {
 
     render() {
         return (
-            <div></div>
+            <div>
+                <SearchForm/>
+            </div>
         );
     }
 }
