@@ -18,9 +18,9 @@ const HeaderComponent = () => {
 }
 
 const SearchNav = () => {
-    return(
+    return (
         <nav className="vs-nav">
-            <h1 style={{"textAlign":"center"}}>This is a search navbar</h1>
+            <h1 style={{ "textAlign": "center", "color": "#ffffff" }}>This is a search navbar</h1>
         </nav>
     );
 }
@@ -31,7 +31,7 @@ const SearchInput = () => {
     return (
         <form className="vs-search">
             <input
-                placeholder="חפש מוצר לפי מילות מפתח"
+                placeholder="חפש מוצר לפי מילות מפתח..."
                 dir="rtl"
                 className="form-control search-input w-50"
                 type="text" />
@@ -57,8 +57,8 @@ class SearchForm extends Component {
     render() {
         return (
             <div>
-                <HeaderComponent/>
-                <SearchNav/>
+                <HeaderComponent />
+                <SearchNav />
 
             </div>
         );

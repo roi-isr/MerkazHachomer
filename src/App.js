@@ -12,19 +12,17 @@ import ProcessPage from "./ProcessPage";
 
 function App() {
   return (
-       <Router>
-        <Switch>
-          <Route path="/home"><HomePage/></Route>
-          <Route path="/virtual-store"><VirtualStore/></Route>{" "}
-          <Route path="/item-view"><ItemView/></Route>{" "}
-          <Route path="/process-page"><ProcessPage/></Route>{" "}
-          <Route exact path="/">
-            <Redirect to="/process-page"/>
-          </Route>
-
-
-        </Switch>
-      </Router>
+    <Router>
+      <Switch>
+        <Route path="/home"><HomePage /></Route>
+        <Route path="/virtual-store"><VirtualStore /></Route>{" "}
+        <Route path="/item-view"><ItemView /></Route>{" "}
+        <Route path="/process-page"><ProcessPage /></Route>{" "}
+        <Route exact path="/">
+          <Redirect to="/process-page" />
+        </Route>
+      </Switch>
+    </Router>
 
   );
 }

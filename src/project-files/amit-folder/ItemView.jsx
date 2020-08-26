@@ -4,7 +4,7 @@ class ItemView extends Component {
 
     render() {
         return (
-            <div>In process...</div>
+            <div>In progress...</div>
         );
     }
 }
