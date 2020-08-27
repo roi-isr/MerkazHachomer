@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./SearchForm.css"
+import "./VirtualStoreHeader.css"
 import logo from "./static-files/logo.JPG"
 
 const HeaderComponent = () => {
@@ -52,7 +52,7 @@ const SearchInput = () => {
 }
 
 
-class SearchForm extends Component {
+class VirtualStoreHeader extends Component {
 
     render() {
         return (
@@ -64,4 +64,4 @@ class SearchForm extends Component {
         );
     }
 }
-export default SearchForm;
+export default VirtualStoreHeader;

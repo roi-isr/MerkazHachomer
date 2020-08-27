@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import SearchForm from "./SearchForm"
+import VirtualStoreHeader from "./VirtualStoreHeader"
 import SingleItemLayout from "./SingleItemLayout"
 import "./VirtualStore.css"
 
@@ -66,7 +66,7 @@ class VirtualStore extends Component {
     render() {
         return (
             <div>
-                <SearchForm />
+                <VirtualStoreHeader />
                 <ItemLayout layout={this.state.layout} />
             </div>
         );
