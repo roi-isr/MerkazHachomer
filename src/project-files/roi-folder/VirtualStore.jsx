@@ -4,7 +4,7 @@ import SingleItemLayout from "./SingleItemLayout"
 import "./VirtualStore.css"
 
 const TurnPage = (props) => {
-    const [hoverColor, setHoverColor] = useState("#144399");
+    const [hoverColor, setHoverColor] = useState("#144399"); // React Hooks syntax
     const arrow = props.directionArrow === "next" ? ">" : "<";
     const divStyle = {
         "border": "4px black solid",

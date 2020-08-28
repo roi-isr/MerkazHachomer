@@ -11,7 +11,6 @@ const HeaderComponent = () => {
                     <SearchInput />
                 </div>
                 <img className="vs-logo" src={logo} alt="logo" />
-
             </div>
         </header>
     );
@@ -20,7 +19,9 @@ const HeaderComponent = () => {
 const SearchNav = () => {
     return (
         <nav className="vs-nav">
-            <h1 style={{ "textAlign": "center", "color": "#ffffff" }}>This is a search navbar</h1>
+            <h1 style={{ "textAlign": "center", "color": "#ffffff" }}>
+                This is a search navbar
+            </h1>
         </nav>
     );
 }
