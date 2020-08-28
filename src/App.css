@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.router-div{
+ display: flex;
+ flex-direction: column;
+ width:50%;
+ margin: auto;
+}
+.r-btn{
+  margin-top: 50px;
+}
+
+.wp-btn{
+  text-align: center;
+}

@@ -1,0 +1,27 @@
+
+
+.store-layout{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.vb-arrows{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.vs-main{
+    background-color:#a0a5a5;
+    width: 1200px;
+    height: 464px;
+    margin: auto;
+    margin-top: 3px;
+    border-radius: 2px;
+    padding:20px;
+}
