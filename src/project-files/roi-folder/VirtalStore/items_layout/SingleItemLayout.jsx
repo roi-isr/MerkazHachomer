@@ -20,30 +20,31 @@ const LeftSideItem = (props) => {
                 className="item-url-photo"
                 key={"item" + props.index}
                 src={props.item.photoUrl}
+                alt={props.item.item}
             />
             <div className="price-and-button">
-                <h4 className="item-price-txt">מחיר: {props.item.price}</h4>
-                <button className="btn btn-info">לחץ לפרטים</button>
+                <h5 className="item-price-txt">מחיר: {props.item.price}</h5>
+                <button className="btn btn-primary vs-addtocart-btn w-100">הוסף לסל!</button>
+                <button className="btn btn-info vs-info-btn w-100">לחץ לפרטים</button>
             </div>
         </div>
     );
 }
 
-class SingleItemLayout extends Component {
+const SingleItemLayout = (props) => {
 
-    render() {
-        return (
-            <div className="store-item">
-                <RightSideItem
-                    item={this.props.item.item}
-                    description={this.props.item.description}
-                />
-                <LeftSideItem
-                    index={this.props.index}
-                    item={this.props.item}
-                />
-            </div>
-        );
-    }
+    return (
+        <div className="store-item">
+            <RightSideItem
+                item={props.item.item}
+                description={props.item.description}
+            />
+            <LeftSideItem
+                index={props.index}
+                item={props.item}
+            />
+        </div>
+    );
 }
+
 export default SingleItemLayout;

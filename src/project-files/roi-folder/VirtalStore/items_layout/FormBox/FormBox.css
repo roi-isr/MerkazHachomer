@@ -1,0 +1,18 @@
+.form-box-main{
+ background: rgba(0, 0, 0, 0.6);
+ cursor: pointer;
+ display: inline-block;
+ height: 400px;
+ width: 800px;
+ position: fixed;
+ text-align: center;
+ margin-top:10px;
+ margin-left:100px;
+ border: 2px black solid;
+ border-radius: 5px;
+}
+
+.form-box-main .helper{
+    /* display: inline-block; */
+    height: 100%;
+}

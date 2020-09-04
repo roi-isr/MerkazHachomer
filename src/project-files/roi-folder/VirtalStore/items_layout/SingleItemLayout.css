@@ -1,15 +1,25 @@
 .store-item{
     background-color: black;
     width: 350px;
-    height: 265px;
+    height: 295px;
     border-radius: 20px;
     display: flex;
     flex-direction: row-reverse;
-    box-shadow: 0 2px 10px #dfffff;
+    box-shadow: 1px 2px 10px 2px #dfffff;
 }
 
 hr.item-hr{
     border-top: 1px white solid
+}
+
+.vs-info-btn{
+    font-size: 13px;
+}
+
+.vs-addtocart-btn{
+    font-size: 13px;
+    direction: rtl;
+    margin-bottom: 3px;
 }
 
 .topic-txt{
