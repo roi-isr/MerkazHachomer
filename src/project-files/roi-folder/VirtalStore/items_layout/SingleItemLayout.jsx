@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./SingleItemLayout.css"
+import FormBox from "./FormBox/FormBox"
 
 const RightSideItem = (props) => {
     return (
@@ -14,6 +15,21 @@ const RightSideItem = (props) => {
 }
 
 const LeftSideItem = (props) => {
+    const [showFormBox, setshowFormBox] = useState(false); // React Hooks syntax
+    const [formBoxTitle, setFormBoxTitle] = useState(""); // React Hooks syntax
+    const closeBox = () => {
+        setshowFormBox(false);
+    }
+    const basketClick = () => {
+        setFormBoxTitle("הוסף מוצר לסל")
+        setshowFormBox(true);
+    }
+
+    const detailsClick = () => {
+        setFormBoxTitle("פרטי מוצר")
+        setshowFormBox(true);
+    }
+
     return (
         <div className="item-details">
             <img
@@ -24,9 +40,16 @@ const LeftSideItem = (props) => {
             />
             <div className="price-and-button">
                 <h5 className="item-price-txt">מחיר: {props.item.price}</h5>
-                <button className="btn btn-primary vs-addtocart-btn w-100">הוסף לסל!</button>
-                <button className="btn btn-info vs-info-btn w-100">לחץ לפרטים</button>
+                <button
+                    className="btn btn-primary vs-addtocart-btn w-100"
+                    onClick={basketClick}
+                >הוסף לסל!</button>
+                <button
+                    className="btn btn-info vs-info-btn w-100"
+                    onClick={detailsClick}
+                >לחץ לפרטים</button>
             </div>
+            {showFormBox ? <FormBox closeBox={closeBox} title={formBoxTitle} /> : null}
         </div>
     );
 }

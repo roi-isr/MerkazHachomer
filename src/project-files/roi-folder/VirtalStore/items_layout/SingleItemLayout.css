@@ -52,6 +52,8 @@ hr.item-hr{
 
 .item-price-txt{
     color: white;
+    text-align: center;
+    text-shadow: 0px 0px 10px turquoise;
 }
 
 .item-right-side{

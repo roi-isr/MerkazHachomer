@@ -1,18 +1,46 @@
 .form-box-main{
- background: rgba(0, 0, 0, 0.6);
+ background: rgba(5, 5, 5, 0.5);
  cursor: pointer;
  display: inline-block;
- height: 400px;
- width: 800px;
+ height: 100%;
+ width: 100%;
  position: fixed;
+ top:0;
+ left: 0;
  text-align: center;
- margin-top:10px;
- margin-left:100px;
- border: 2px black solid;
- border-radius: 5px;
 }
 
 .form-box-main .helper{
-    /* display: inline-block; */
     height: 100%;
 }
+
+.form-box-main>div{
+    box-shadow: 0px 0px 30px #555;
+    background-color: #ffffff;
+    height: auto;
+    display: inline-block;
+    width: 795px;
+    height: 397px;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 100px;
+}
+
+.close-form-box{
+    background-color: #b1a8a8;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial;
+    font-weight: bold;
+    position: relative;
+    left: 400px;
+    top:-20px;
+    line-height: 28px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+

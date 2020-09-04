@@ -10,8 +10,11 @@ class MyCart extends Component {
                 <div className="form-central">
                     <div
                         className="close-form-box"
-                        onClick={this.props.closeBox }>
+                        onClick={this.props.closeBox}>
                         X
+                    </div>
+                    <div className="formbox-body">
+                        <h1>{this.props.title}</h1>
                     </div>
                 </div>
             </div>

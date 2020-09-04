@@ -37,14 +37,14 @@ const SearchInput = () => {
 }
 
 const ShowCart = () => {
-    const [showFormBox, setshowFromBox] = useState(false); // React Hooks syntax
+    const [showFormBox, setshowFormBox] = useState(false); // React Hooks syntax
    const closeBox = () => {
-        setshowFromBox(false);
+        setshowFormBox(false);
     }
     return (
         <div>
-            <button onClick={() => setshowFromBox(true)} className="btn btn-success show-my-cart-btn">צפייה בסל המוצרים שלי!</button>
-            {showFormBox ? <FormBox closeBox={closeBox} /> : null}
+            <button onClick={() => setshowFormBox(true)} className="btn btn-success show-my-cart-btn">צפייה בסל המוצרים שלי!</button>
+            {showFormBox ? <FormBox title={"סל המוצרים שלי"} closeBox={closeBox} /> : null}
         </div>
     );
 }
