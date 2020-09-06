@@ -21,9 +21,7 @@ state={
               <a className="nav-link active" href="#">קורסים והשתלמויות</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">עבודת י
-              
-              ד</a>
+              <a className="nav-link" href="#">עבודת יד</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">הפינה של אירית</a>
