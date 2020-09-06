@@ -15,6 +15,7 @@ class MyCart extends Component {
                     </div>
                     <div className="formbox-body">
                         <h1>{this.props.title}</h1>
+                        <h3>{this.props.productName}</h3>
                     </div>
                 </div>
             </div>

@@ -49,7 +49,12 @@ const LeftSideItem = (props) => {
                     onClick={detailsClick}
                 >לחץ לפרטים</button>
             </div>
-            {showFormBox ? <FormBox closeBox={closeBox} title={formBoxTitle} /> : null}
+            {showFormBox ?
+             <FormBox 
+             closeBox={closeBox} 
+             title={formBoxTitle}
+             productName={props.item.item} /> 
+             : null}
         </div>
     );
 }
