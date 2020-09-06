@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-d
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomePage from "./project-files/daniel-folder/HomePage";
 import ItemView from "./project-files/amit-folder/ItemView";
-import VirtualStore from "./project-files/roi-folder/VirtualStore";
+import VirtualStore from "./project-files/roi-folder/VirtalStore/VirtualStore";
 import ProcessPage from "./ProcessPage";
 
 
