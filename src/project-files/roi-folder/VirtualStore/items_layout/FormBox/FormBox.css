@@ -10,6 +10,24 @@
  text-align: center;
 }
 
+.vs-item-amount{
+    position: relative;
+    top:2px;
+height: 35px;
+width: 50px;
+text-align: center;
+margin: 5px;
+}
+
+.adj-itm-div{
+    margin-top: 60px;
+}
+
+.addItemsToCart{
+    direction: rtl;
+    margin-top: 60px;
+}
+
 .form-box-main .helper{
     height: 100%;
 }
