@@ -4,36 +4,39 @@ import logo from "../../static-files/merkaz_hachomer_logo.JPG";
 import FormBox from "../items_layout/FormBox/FormBox";
 
 
-const SearchNav = () => {
+const NavItem = (props) => {
+    return (
+        <li className={"nav-item" + (props.isActive === props.index ? " active" : "")}>
+            <div className="nav-link" onClick={props.activate}>{props.item}</div>
+            {props.VerticalLine}
+        </li>
+    );
+}
 
+const SearchNav = () => {
+    const [isActive, setIsActive] = useState(null); // React Hooks syntax
+    const [navItems, setNavItems] = useState(["רהיטים", "יצירה", "חומרים", "תמונות", "מתנות", "ילדים", "מבוגרים", "פנאי","לימודים"]); // React Hooks syntax
     const VerticalLine =
-        <div className="vs-ver-line" />
+        <div className="vs-ver-line" />;
+
+    const activate = (index) => {
+        setIsActive(index)
+    }
 
     return (
-        <nav className="navbar navbar-light vs-nav">
+        <nav className="navbar-dark vs-nav">
             <div className="navbar-brand vs-fast-search-txt" href="#">חיפוש מהיר</div>
             {VerticalLine}
             <ul className="navbar-nav vs-search-nav">
-                <li className="nav-item">
-                    <div className="nav-link">רהיטים</div>
-                    {VerticalLine}
-                </li>
-                <li className="nav-item">
-                    <div className="nav-link">יצירה</div>
-                    {VerticalLine}
-                </li>
-                <li className="nav-item">
-                    <div className="nav-link">חומרים</div>
-                    {VerticalLine}
-                </li>
-                <li className="nav-item">
-                    <div className="nav-link">תמונות</div>
-                    {VerticalLine}
-                </li>
-                <li className="nav-item">
-                    <div className="nav-link">מתנות</div>
-                    {VerticalLine}
-                </li>
+                {navItems.map((item, index) =>
+                    <NavItem
+                        isActive={isActive}
+                        item={navItems[index]}
+                        VerticalLine={VerticalLine}
+                        activate={() => activate(index)}
+                        index={index}
+                    />
+                )}
             </ul>
         </nav>
     );
