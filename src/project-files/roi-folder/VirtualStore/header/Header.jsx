@@ -3,12 +3,38 @@ import "./Header.css";
 import logo from "../../static-files/merkaz_hachomer_logo.JPG";
 import FormBox from "../items_layout/FormBox/FormBox";
 
+
 const SearchNav = () => {
+
+    const VerticalLine =
+        <div className="vs-ver-line" />
+
     return (
-        <nav className="vs-nav">
-            <h1 style={{ "textAlign": "center", "color": "#ffffff" }}>
-                This is a search navbar
-            </h1>
+        <nav className="navbar navbar-light vs-nav">
+            <div className="navbar-brand vs-fast-search-txt" href="#">חיפוש מהיר</div>
+            {VerticalLine}
+            <ul className="navbar-nav vs-search-nav">
+                <li className="nav-item">
+                    <div className="nav-link">רהיטים</div>
+                    {VerticalLine}
+                </li>
+                <li className="nav-item">
+                    <div className="nav-link">יצירה</div>
+                    {VerticalLine}
+                </li>
+                <li className="nav-item">
+                    <div className="nav-link">חומרים</div>
+                    {VerticalLine}
+                </li>
+                <li className="nav-item">
+                    <div className="nav-link">תמונות</div>
+                    {VerticalLine}
+                </li>
+                <li className="nav-item">
+                    <div className="nav-link">מתנות</div>
+                    {VerticalLine}
+                </li>
+            </ul>
         </nav>
     );
 }
@@ -38,7 +64,7 @@ const SearchInput = () => {
 
 const ShowCart = () => {
     const [showFormBox, setshowFormBox] = useState(false); // React Hooks syntax
-   const closeBox = () => {
+    const closeBox = () => {
         setshowFormBox(false);
     }
     return (

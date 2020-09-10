@@ -15,19 +15,19 @@ const RightSideItem = (props) => {
 }
 
 const LeftSideItem = (props) => {
-    const [showFormBox, setshowFormBox] = useState(false); // React Hooks syntax
+    const [showFormBox, setshowFormBox] = useState(null); // React Hooks syntax
     const [formBoxTitle, setFormBoxTitle] = useState(""); // React Hooks syntax
     const closeBox = () => {
         setshowFormBox(false);
     }
     const basketClick = () => {
         setFormBoxTitle("הוסף מוצר לסל")
-        setshowFormBox(true);
+        setshowFormBox("basket");
     }
 
     const detailsClick = () => {
         setFormBoxTitle("פרטי מוצר")
-        setshowFormBox(true);
+        setshowFormBox("details");
     }
 
     return (
@@ -50,11 +50,16 @@ const LeftSideItem = (props) => {
                 >לחץ לפרטים</button>
             </div>
             {showFormBox ?
-             <FormBox 
-             closeBox={closeBox} 
-             title={formBoxTitle}
-             productName={props.item.item} /> 
-             : null}
+                <FormBox
+                    closeBox={closeBox}
+                    title={formBoxTitle}
+                    productName={props.item.item}
+                    price={props.item.price}
+                    description={props.item.description}
+                    type={showFormBox}
+                    link={props.item.photoUrl}
+                />
+                : null}
         </div>
     );
 }
