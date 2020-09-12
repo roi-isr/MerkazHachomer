@@ -60,7 +60,7 @@ const AddToCart = (props) => {
 }
 
 class FormBox extends Component {
-
+    
     render() {
         return (
             <div className="form-box-main">

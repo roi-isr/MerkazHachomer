@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import "./Header.css";
+import { connect } from 'react-redux'
 import logo from "../../static-files/merkaz_hachomer_logo.JPG";
 import FormBox from "../items_layout/FormBox/FormBox";
 
@@ -13,14 +14,15 @@ const NavItem = (props) => {
     );
 }
 
-const SearchNav = () => {
-    const [isActive, setIsActive] = useState(null); // React Hooks syntax
-    const [navItems, setNavItems] = useState(["רהיטים", "יצירה", "חומרים", "תמונות", "מתנות", "ילדים", "מבוגרים", "פנאי","לימודים"]); // React Hooks syntax
+const SearchNav = (props) => {
+    const [isActive, setIsActive] = useState(0); // React Hooks syntax
+    const [navItems, setNavItems] = useState(["הכל", "רהיטים", "יצירה", "חומרים", "תמונות", "מתנות", "ילדים", "מבוגרים", "פנאי", "לימודים", "מטבח"]); // React Hooks syntax
     const VerticalLine =
         <div className="vs-ver-line" />;
 
     const activate = (index) => {
-        setIsActive(index)
+        setIsActive(index);
+        props.onSearchItemChange(navItems[index]);
     }
 
     return (
@@ -42,7 +44,7 @@ const SearchNav = () => {
     );
 }
 
-const SearchInput = () => {
+const SearchInput = (props) => {
     return (
         <form className="vs-search">
             <input
@@ -96,14 +98,22 @@ const HeaderComponent = () => {
 }
 
 
-const VirtualStoreHeader = () => {
+const VirtualStoreHeader = (props) => {
 
     return (
         <div>
             <HeaderComponent />
-            <SearchNav />
+            <SearchNav onSearchItemChange={props.onSearchItemChange} />
         </div>
     );
 }
 
-export default VirtualStoreHeader;
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSearchItemChange: (itemAlt) => dispatch({ type: 'ITEM_CHANGE', value: itemAlt })
+    };
+}
+
+export default connect(null, mapDispatchToProps)(VirtualStoreHeader);

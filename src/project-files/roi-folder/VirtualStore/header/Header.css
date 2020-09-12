@@ -70,12 +70,27 @@
 }
 
 .vs-welcome-title{
+    /* background: linear-gradient(90deg,#ffffff,#ffffff);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
     font-family: Guttman Mantova-Decor;
     font-size: 55px;
     margin: 15px 80px;
     color: #ffffff;
     text-shadow: 0 10px 20px #000000;
+    /* transition: 0.1s; */
 }
+
+/* .vs-welcome-title:hover{
+    background: linear-gradient(90deg,#ff8a00,#e52e00,#b8182b);
+    text-shadow: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-0.15rem);
+} */
 
 .vs-header-div{
     width:100%;
@@ -112,8 +127,11 @@
     border-radius: 50px;
     margin: 9px;
     justify-content: right;
-
+    /* transition: 0.2s; */
 }
+/* .vs-logo:hover{
+    transform: translate(0.15rem,-0.3rem);
+} */
 
 .vs-search-btn{
     margin-left: 5px; 
