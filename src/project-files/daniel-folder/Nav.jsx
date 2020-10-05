@@ -1,4 +1,5 @@
 import React from "react"
+import Cart from "./Cart"
 
 const Welcome =(props)=> {
     return (
@@ -15,10 +16,13 @@ const Welcome =(props)=> {
                     <a className="nav-link" href="#">הפינה של אירית</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">עלינו</a>
+                    <a className="nav-link" href="/home/about-us">עלינו</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">עמוד הבית</a>
+                    <a className="nav-link" href="/home/homepage">עמוד הבית</a>
+         </li>
+         <li>
+            <Cart/>
          </li>
             </ul>
 
