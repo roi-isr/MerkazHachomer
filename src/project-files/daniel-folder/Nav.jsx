@@ -1,7 +1,7 @@
 import React from "react"
 import Cart from "./Cart"
 //efe
-//dssdg
+//dssdgk
 const Welcome =(props)=> {
     return (
         <nav className="navbar navbar-light" style={{padding:"12px", "direction":"rtl","backgroundColor": "#e3f2fd" ,"textAlign":"right"}}>
