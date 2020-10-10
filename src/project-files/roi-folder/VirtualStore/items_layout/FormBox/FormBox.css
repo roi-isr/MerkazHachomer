@@ -8,6 +8,8 @@
  top:0;
  left: 0;
  text-align: center;
+
+
 }
  
 .form-central{
@@ -100,5 +102,4 @@ margin: 5px;
 .close-form-box:active{
     background-color: #e7e8f0;
 }
-
 

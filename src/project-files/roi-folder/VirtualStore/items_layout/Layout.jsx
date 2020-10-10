@@ -5,8 +5,9 @@ import { connect } from 'react-redux'
 
 const TurnPage = (props) => {
     const [hoverColor, setHoverColor] = useState("#140399"); // React Hooks syntax
-    const arrow = props.directionArrow === "next" ? ">" : "<";
+    const arrow = props.directionArrow === "next" ? "<" : ">";
     const divStyle = {
+        'bottom': '20px',
         "border": "4px black solid",
         "width": "60px",
         "height": "60px",
@@ -15,14 +16,14 @@ const TurnPage = (props) => {
         "marginTop": "30px",
         "backgroundColor": hoverColor,
         "outline": "none",
-        "transition":"0.15s"
+        "transition": "0.15s"
     }
     const hStyle = {
         "color": "white",
         "fontSize": "75px",
         "lineHeight": "0px",
         "marginTop": "-7px",
-        "marginLeft": props.directionArrow === "next" ? "-3px" : "-10px"
+        "marginLeft": props.directionArrow === "prev" ? "-3px" : "-10px"
     }
 
     return (
@@ -47,13 +48,12 @@ class ItemLayout extends Component {
     }
 
     componentDidUpdate(prevProp) {
-        if (prevProp.searchList !== this.props.searchList)
+        if (prevProp.searchList !== this.props.searchList || prevProp.layout !== this.props.layout)
             this.setState({ currIndex: 0 });
     }
 
     updateIndex = (dir) => {
-        const layout = this.props.searchList === 'הכל' ?
-            [...this.props.layout] : this.props.layout.filter(item => item.type.includes(this.props.searchList));
+        const layout = [...this.props.layout];
         if (dir === "next")
             if (layout[this.state.currIndex + 3])
                 this.setState(prevState => {
@@ -70,22 +70,25 @@ class ItemLayout extends Component {
                 alert("אין יותר פריטים.")
     }
     render() {
-        const layout = this.props.searchList === 'הכל' ?
-            [...this.props.layout] : this.props.layout.filter(item => item.type.includes(this.props.searchList));
+        const layout = [...this.props.layout];
         return (
             <main className="vs-main">
                 <div className="store-layout">
-                    {layout.slice(this.state.currIndex, this.state.currIndex + 3).map((item, index) =>
-                        <SingleItemLayout
-                            key={"item" + index}
-                            item={item}
-                            index={index}
-                        />
-                    )}
+                    {layout.length > 0 ?
+                        layout.slice(this.state.currIndex, this.state.currIndex + 3).map((item, index) =>
+                            <SingleItemLayout
+                                key={"item" + index}
+                                item={item}
+                                index={index}
+                            />)
+                        : <div style={{ margin: 'auto', height: '295px' }}>
+                            <h1 style={{ fontSize: '100px' }}>לא נמצאו מוצרים</h1>
+                        </div>
+                    }
                 </div>
                 <div className="vb-arrows">
-                    <TurnPage updateIndex={this.updateIndex} directionArrow={"prev"} />
                     <TurnPage updateIndex={this.updateIndex} directionArrow={"next"} />
+                    <TurnPage updateIndex={this.updateIndex} directionArrow={"prev"} />
                 </div>
             </main>
         );
@@ -94,7 +97,8 @@ class ItemLayout extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        searchList: state.searchList
+        searchList: state.store.searchList,
+        layout: state.store.storeItems
     };
 }
 

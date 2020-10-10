@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "./SingleItemLayout.css"
 import FormBox from "./FormBox/FormBox"
 
